@@ -1,1 +1,92 @@
 # ashwaryamenon.github.io
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashwarya Menon | Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #DE3163;
+      color: #FFC300;
+    }
+    header {
+      background-color: #faa896;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+    section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1, h2 {
+      margin-bottom: 0.5rem;
+    }
+    .project {
+      background: #96a1fa ;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #eee;
+    }
+    a {
+      color: #4a90e2;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ashwarya Menon</h1>
+    <p>Strategic Engineer | Creative Director | Model</p>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+        <p>
+            <p>
+                I don’t just build systems — I architect stories that move industries.
+                With a core in engineering and a heart that beats for innovation, 
+                I turn complex problems into clean, elegant experiences that connect, empower, and elevate. 
+                From precision to pixels, I design not just what works — but what wins.
+                <br><br>
+                Every move I make is intentional.
+                Every project I touch reflects purpose, performance, and power.
+                And I’m only getting started.
+              </p>
+          </p>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Smart Inspection Dashboard</h3>
+      <p>A dashboard to streamline inspection processes using IoT and AI.</p>
+    </div>
+    <div class="project">
+      <h3>AR Interior Visualizer</h3>
+      <p>Helps clients preview interiors using Augmented Reality built with Unity.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+    <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Your Name. All rights reserved.</p>
+  </footer>
+</body>
+</html>
