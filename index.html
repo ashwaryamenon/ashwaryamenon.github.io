@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashu's Personal Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to bottom, #1a202c, #2d3748);
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        section.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+        .subtitle {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            text-align: center;
+            max-width: 600px;
+        }
+        .button {
+            margin-top: 2rem;
+            padding: 0.75rem 2rem;
+            font-size: 1.25rem;
+            background-color: #4a90e2;
+            color: #ffffff;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #357abd;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+            max-width: 800px;
+        }
+        .skill-item {
+            background-color: #2d3748;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .skill-item:hover {
+            transform: scale(1.05);
+        }
+        .contact-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .contact-links a {
+            color: #4a90e2;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        .contact-links a:hover {
+            color: #357abd;
+        }
+    </style>
+</head>
+<body>
+    <section id="about">
+        <h1 class="title">Welcome to Ashu's Universe</h1>
+        <p class="subtitle">Hi, I'm Ashu! A passionate learner and creator exploring the realms of technology, creativity, and innovation. Join me on this cosmic journey!</p>
+        <a href="#skills" class="button">Discover My Skills</a>
+    </section>
+    <section id="skills">
+        <h1 class="title">My Skills</h1>
+        <p class="subtitle">Here’s what I bring to the table—years of experience in coding, design, and problem-solving, all wrapped in a love for collaboration.</p>
+        <div class="skills-grid">
+            <div class="skill-item">JavaScript</div>
+            <div class="skill-item">Python</div>
+            <div class="skill-item">React</div>
+            <div class="skill-item">Tailwind CSS</div>
+            <div class="skill-item">Node.js</div>
+            <div class="skill-item">UI/UX Design</div>
+        </div>
+    </section>
+    <section id="contact">
+        <h1 class="title">Get in Touch</h1>
+        <p class="subtitle">Want to collaborate or just say hi? Reach out through any of these platforms, and let’s make something awesome together!</p>
+        <div class="contact-links">
+            <a href="mailto:ashu@example.com">Email</a>
+            <a href="https://github.com/ashu" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/ashu" target="_blank">LinkedIn</a>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Scroll animation for sections
+        const sections = document.querySelectorAll('section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.3 });
+
+        sections.forEach(section => observer.observe(section));
+    </script>
+</body>
+</html>
